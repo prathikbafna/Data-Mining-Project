@@ -10,6 +10,11 @@ import datetime
 from dateutil.parser import parse
 from youtube_comments import *
 
+client = pymongo.MongoClient("mongodb+srv://prathikbafna0:gafA4AoTOraqh5RK@cluster0.t3qhk6n.mongodb.net/Social_media_data?retryWrites=true&w=majority")
+db = client.Social_media_data
+YouTube = db.youTube
+
+
 def Category(Id):
     switcher = {
         1  : "Film & Animation",
